@@ -1,0 +1,57 @@
+
+# Bienvenue du profil 
+print("« Bienvenue dans l’assistant de profil ! »")
+
+# Saisie du prénom
+prenom=input("prenom : ")
+
+# Saisie de l'âge 
+age=int(input("age : "))
+
+
+# Saisie de la taille
+taille = float(input("Taille (en mètres) : "))
+
+
+# Saisie du lieu de naissance
+lieu_naissance= input("lieu de naissance : ")
+
+
+# Calcul du statut et de l'année de naissance
+
+majeur= age >= 18
+annee_naissance = 2025 - age
+
+
+
+
+# Création du dictionnaire
+dictionnaire = {
+    "prenom": prenom,
+    "age": age,
+    "taille": taille,
+    "lieu_naissance": lieu_naissance,
+    "majeur": majeur,
+    "annee_naissance": annee_naissance
+}
+
+# Affichage du statut majeur (majeur, ado ou adulte)
+
+if age < 12 :
+    print("jeune")
+elif 12 <= age <= 17 :
+    print("AD0")
+else:
+    print("adulte")
+
+
+# Affichage des informations du profil complet
+
+print("\nvoici votre profil complet :")
+
+print(f"prénom: {dictionnaire['prenom']}")
+print(f"age: {dictionnaire['age']} ans")
+print(f"taille: {dictionnaire['taille']} mètres")
+print(f"lieu de naissance: {dictionnaire['lieu_naissance']}")
+print(f"statut majeur: {'Oui' if dictionnaire['majeur'] else 'Non'}")
+print(f"année de naissance: {dictionnaire['annee_naissance']}")
