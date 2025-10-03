@@ -3,7 +3,7 @@
 print("« Bienvenue dans l’assistant de profil ! »")
 
 # Saisie du prénom
-prenom=input("prenom : ")
+prenom=str(input("prenom : "))
 
 # Saisie de l'âge 
 age=int(input("age : "))
@@ -14,7 +14,7 @@ taille = float(input("Taille (en mètres) : "))
 
 
 # Saisie du lieu de naissance
-lieu_naissance= input("lieu de naissance : ")
+lieu_naissance= str(input("lieu de naissance : "))
 
 
 # Calcul du statut et de l'année de naissance
@@ -54,4 +54,5 @@ print(f"age: {dictionnaire['age']} ans")
 print(f"taille: {dictionnaire['taille']} mètres")
 print(f"lieu de naissance: {dictionnaire['lieu_naissance']}")
 print(f"statut majeur: {'Oui' if dictionnaire['majeur'] else 'Non'}")
+
 print(f"année de naissance: {dictionnaire['annee_naissance']}")
